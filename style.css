@@ -1,0 +1,1200 @@
+/* ==========================================
+   KAALAVAASAL PART 1 : KAALAFIRE
+   OFFICIAL MOVIE WEBSITE
+========================================== */
+
+
+/* ==========================================
+   RESET
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    background: #020202;
+}
+
+body {
+    margin: 0;
+    background:
+        radial-gradient(
+            circle at top,
+            #180600 0%,
+            #050201 35%,
+            #000000 75%
+        );
+
+    color: #ffffff;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+header {
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+}
+
+
+/* ==========================================
+   MENU BAR / BANNER
+========================================== */
+
+.navbar {
+
+    width: 100%;
+    min-height: 72px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* MENU BAR BANNER COLOR */
+
+    background:
+        linear-gradient(
+            90deg,
+            #080200 0%,
+            #241006 25%,
+            #3a1405 50%,
+            #241006 75%,
+            #080200 100%
+        );
+
+    border-top: 1px solid rgba(255, 92, 0, 0.7);
+
+    border-bottom: 2px solid #ff5a00;
+
+    box-shadow:
+        0 4px 15px rgba(255, 70, 0, 0.25),
+        0 8px 30px rgba(0, 0, 0, 0.8);
+
+    position: relative;
+}
+
+
+/* Small orange light line */
+
+.navbar::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 10%;
+
+    width: 80%;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #ff7a00,
+            #ffb000,
+            #ff7a00,
+            transparent
+        );
+
+    box-shadow:
+        0 0 10px #ff6500;
+}
+
+
+/* ==========================================
+   MENU
+========================================== */
+
+.menu {
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 18px;
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ==========================================
+   MENU ITEMS
+========================================== */
+
+.menu li {
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+/* ==========================================
+   MENU LINKS
+========================================== */
+
+.menu a {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 105px;
+
+    height: 44px;
+
+    padding: 0 18px;
+
+    color: #ff8a3d;
+
+    background: transparent;
+
+    border: 1px solid transparent;
+
+    border-radius: 5px;
+
+    text-decoration: none;
+
+    font-family:
+        "Monotype Corsiva",
+        "Segoe Script",
+        cursive;
+
+    font-size: 24px;
+
+    font-weight: normal;
+
+    letter-spacing: 1px;
+
+    transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        border 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+
+    text-shadow:
+        0 0 5px rgba(255, 80, 0, 0.8),
+        0 0 12px rgba(255, 60, 0, 0.35);
+}
+
+
+/* ==========================================
+   MENU HOVER
+========================================== */
+
+.menu a:hover {
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff3d00,
+            #ff7600,
+            #ff3d00
+        );
+
+    border-color: #ffb000;
+
+    box-shadow:
+        0 0 10px rgba(255, 70, 0, 0.8),
+        0 0 25px rgba(255, 70, 0, 0.5),
+        inset 0 0 10px rgba(255, 200, 100, 0.2);
+
+    transform: translateY(-2px);
+
+    text-shadow:
+        0 0 5px #ffffff;
+}
+
+
+/* ==========================================
+   HOME ACTIVE
+========================================== */
+
+.menu li:first-child a {
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e83b00,
+            #ff6500,
+            #e83b00
+        );
+
+    border-color: #ff8a00;
+
+    box-shadow:
+        0 0 10px rgba(255, 70, 0, 0.65),
+        0 0 25px rgba(255, 70, 0, 0.3);
+}
+
+
+/* ==========================================
+   RELEASE BUTTON
+========================================== */
+
+.menu li:last-child a {
+
+    border: 1px solid #ff6500;
+
+    color: #ff963f;
+
+}
+
+
+.menu li:last-child a:hover {
+
+    background: #ff6500;
+
+    color: #ffffff;
+
+}
+
+
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+.hero {
+
+    width: 100%;
+
+    height: 100vh;
+
+    min-height: 650px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background-color: #000000;
+
+}
+
+
+/* ==========================================
+   HERO BACKGROUND SLIDESHOW
+========================================== */
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        url("images/kv1.jpg.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    animation:
+        heroSlideshow 12s infinite;
+
+    z-index: 0;
+}
+
+
+/* ==========================================
+   DARK CINEMATIC OVERLAY
+========================================== */
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.25),
+            rgba(0, 0, 0, 0.85)
+        );
+
+    z-index: 1;
+
+}
+
+
+/* ==========================================
+   HERO CONTENT
+========================================== */
+
+.hero-content {
+
+    max-width: 1000px;
+
+    padding: 30px;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+/* ==========================================
+   OFFICIAL WEBSITE
+========================================== */
+
+.subtitle {
+
+    color: #ff9a00;
+
+    letter-spacing: 7px;
+
+    margin-bottom: 20px;
+
+    font-size: 18px;
+
+    text-shadow:
+        0 0 10px #ff6500;
+
+}
+
+
+/* ==========================================
+   MOVIE TITLE
+========================================== */
+
+.hero h1 {
+
+    font-family: Algerian, serif;
+
+    font-size: clamp(
+        55px,
+        8vw,
+        110px
+    );
+
+    letter-spacing: 5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff2200,
+            #ff5a00,
+            #ffb000,
+            #ffffff,
+            #ff5a00,
+            #ff2200
+        );
+
+    background-size: 300% 100%;
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    animation: titleColor 5s ease infinite;
+
+    text-shadow:
+        0 0 15px rgba(255, 50, 0, 0.8),
+        0 0 40px rgba(255, 80, 0, 0.55);
+}
+
+
+/* ==========================================
+   PART TITLE
+========================================== */
+
+.hero h2 {
+
+    margin-top: 15px;
+
+    font-size: 38px;
+
+    font-family: Elephant, serif;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 10px #ff4d00,
+        0 0 25px rgba(255, 60, 0, 0.6);
+}
+
+
+/* ==========================================
+   DESCRIPTION
+========================================== */
+
+.description {
+
+    margin-top: 25px;
+
+    font-family: Elephant, serif;
+
+    font-size: 22px;
+
+    color: #ffffff;
+
+    line-height: 45px;
+
+    text-shadow:
+        0 0 10px #000000;
+}
+
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.buttons {
+
+    margin-top: 40px;
+
+}
+
+
+.btn {
+
+    display: inline-block;
+
+    padding: 15px 35px;
+
+    margin: 10px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+
+    font-weight: bold;
+
+    transition: 0.4s;
+
+}
+
+
+/* FIRST BUTTON */
+
+.trailer-btn {
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff1e00,
+            #ff6500,
+            #ffb000
+        );
+
+    color: white;
+
+    border: none;
+
+    box-shadow:
+        0 0 15px rgba(255, 70, 0, 0.5);
+}
+
+
+.trailer-btn:hover {
+
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 20px #ff4d00,
+        0 0 40px rgba(255, 70, 0, 0.6);
+}
+
+
+/* SECOND BUTTON */
+
+.explore-btn {
+
+    background:
+        linear-gradient(
+            90deg,
+            #161616,
+            #302010
+        );
+
+    color: #ff8500;
+
+    border: 2px solid #ff6500;
+
+}
+
+
+.explore-btn:hover {
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff3d00,
+            #ff7600
+        );
+
+    color: white;
+
+    border-color: #ffb000;
+
+    box-shadow:
+        0 0 20px rgba(255, 70, 0, 0.6);
+}
+
+
+/* ==========================================
+   GENERAL SECTIONS
+========================================== */
+
+section {
+
+    padding: 100px 80px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #030303,
+            #0a0300,
+            #000000
+        );
+}
+
+
+section h2 {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+    color: #ff6500;
+
+    font-size: 40px;
+
+    text-shadow:
+        0 0 10px rgba(255, 70, 0, 0.6);
+}
+
+
+section p {
+
+    text-align: center;
+
+    color: #cccccc;
+
+    line-height: 35px;
+
+    font-size: 18px;
+}
+
+
+/* ==========================================
+   CARDS
+========================================== */
+
+.cards {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+
+.card {
+
+    width: 300px;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #160703,
+            #090909
+        );
+
+    border: 1px solid #44200e;
+
+    transition: 0.4s;
+}
+
+
+.card:hover {
+
+    transform: translateY(-10px);
+
+    border-color: #ff4d00;
+
+    box-shadow:
+        0 0 20px rgba(255, 70, 0, 0.5),
+        0 0 40px rgba(255, 70, 0, 0.2);
+}
+
+
+.card h3 {
+
+    color: #ff6500;
+
+    margin-bottom: 15px;
+}
+
+
+/* ==========================================
+   GALLERY
+========================================== */
+
+.gallery {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+
+.image-box {
+
+    width: 320px;
+
+    height: 220px;
+
+    border: 2px dashed #7a320e;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: #ff8a3d;
+
+    background:
+        linear-gradient(
+            145deg,
+            #120602,
+            #030303
+        );
+
+    transition: 0.4s;
+
+}
+
+
+.image-box:hover {
+
+    border-color: #ff6500;
+
+    color: white;
+
+    box-shadow:
+        0 0 20px rgba(255, 60, 0, 0.7);
+}
+
+
+/* ==========================================
+   COUNTDOWN
+========================================== */
+
+.countdown {
+
+    text-align: center;
+
+}
+
+
+#timer {
+
+    margin-top: 30px;
+
+    font-size: 60px;
+
+    color: #ff6500;
+
+    text-shadow:
+        0 0 15px red,
+        0 0 35px rgba(255, 60, 0, 0.5);
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer {
+
+    background:
+        linear-gradient(
+            180deg,
+            #0c0300,
+            #020202
+        );
+
+    padding: 50px 20px;
+
+    text-align: center;
+
+    border-top: 2px solid #331105;
+}
+
+
+footer h2 {
+
+    color: #ff6500;
+
+    margin-bottom: 20px;
+
+}
+
+
+footer p {
+
+    color: #aaaaaa;
+}
+
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+@keyframes heroSlideshow {
+
+    0%,
+    45% {
+
+        background-image:
+            url("kv1.jpg.png");
+
+        transform: scale(1);
+
+    }
+
+    50%,
+    95% {
+
+        background-image:
+            url("kv2.jpg.png");
+
+        transform: scale(1.04);
+
+    }
+
+    100% {
+
+        background-image:
+            url("kv1.jpg.png");
+
+        transform: scale(1);
+
+    }
+
+}
+
+
+
+@keyframes titleColor {
+
+    0% {
+
+        background-position: 0% 50%;
+
+    }
+
+    50% {
+
+        background-position: 100% 50%;
+
+    }
+
+    100% {
+
+        background-position: 0% 50%;
+
+    }
+
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 900px) {
+
+    .navbar {
+
+        min-height: auto;
+
+        padding: 12px 10px;
+
+    }
+
+
+    .menu {
+
+        gap: 5px;
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .menu a {
+
+        min-width: auto;
+
+        height: 38px;
+
+        padding: 0 12px;
+
+        font-size: 19px;
+
+    }
+
+
+    .hero {
+
+        min-height: 600px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 50px;
+
+    }
+
+
+    .hero h2 {
+
+        font-size: 25px;
+
+    }
+
+
+    .description {
+
+        font-size: 17px;
+
+        line-height: 30px;
+
+    }
+
+
+    .buttons {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+
+    .btn {
+
+        width: 250px;
+
+    }
+
+
+    section {
+
+        padding: 80px 20px;
+
+    }
+
+
+    .card {
+
+        width: 100%;
+
+    }
+
+
+    .image-box {
+
+        width: 100%;
+
+    }
+
+
+    #timer {
+
+        font-size: 35px;
+
+    }
+
+}
+/* =================================
+        KVKF 1 SIDE PANEL
+================================= */
+
+.side-panel {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 250px;
+    height: 100vh;
+
+    background: linear-gradient(
+        180deg,
+        #080300,
+        #140700,
+        #050505
+    );
+
+    border-right: 1px solid #ff6500;
+
+    padding: 18px 12px;
+
+    z-index: 5000;
+
+    box-shadow:
+        5px 0 25px rgba(255, 70, 0, 0.18);
+}
+
+
+/* =================================
+        HEADER
+================================= */
+
+.side-header {
+
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 10px;
+
+    border-bottom: 1px solid
+        rgba(255, 101, 0, 0.35);
+
+    margin-bottom: 18px;
+}
+
+
+/* KVKF 1 */
+
+.kvkf-title {
+
+    font-family: Algerian, serif;
+
+    font-size: 24px;
+
+    letter-spacing: 2px;
+
+    color: #ff6500;
+
+    text-shadow:
+        0 0 8px #ff4500,
+        0 0 18px rgba(255, 69, 0, .5);
+}
+
+
+/* MAGIC WAND */
+
+.magic-wand {
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    background: rgba(255, 101, 0, .08);
+
+    border: 1px solid
+        rgba(255, 101, 0, .35);
+
+    transition: .3s;
+}
+
+
+.magic-wand:hover {
+
+    background: #ff6500;
+
+    transform:
+        rotate(12deg)
+        scale(1.08);
+
+    box-shadow:
+        0 0 15px #ff6500;
+}
+
+
+/* =================================
+        SIDE MENU
+================================= */
+
+.side-menu {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+/* MENU ITEM */
+
+.side-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    width: 100%;
+
+    min-height: 48px;
+
+    padding: 10px 14px;
+
+    border-radius: 9px;
+
+    color: #eeeeee;
+
+    text-decoration: none;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 16px;
+
+    transition: .3s;
+}
+
+
+/* ICON */
+
+.side-icon {
+
+    width: 25px;
+
+    text-align: center;
+
+    font-size: 19px;
+
+    color: #ff6500;
+
+    transition: .3s;
+}
+
+
+/* HOVER */
+
+.side-item:hover {
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 101, 0, .22),
+            rgba(255, 101, 0, .05)
+        );
+
+    color: #ffffff;
+
+    transform:
+        translateX(4px);
+
+}
+
+
+/* ICON HOVER */
+
+.side-item:hover .side-icon {
+
+    color: #ffb000;
+
+    text-shadow:
+        0 0 10px #ff6500;
+}
+
+
+/* =================================
+        MOBILE
+================================= */
+
+@media (max-width: 700px) {
+
+    .side-panel {
+
+        width: 210px;
+
+    }
+
+    .kvkf-title {
+
+        font-size: 20px;
+
+    }
+
+    .side-item {
+
+        font-size: 14px;
+
+    }
+
+}

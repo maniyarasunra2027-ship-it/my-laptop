@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KVKF 1 : STORY</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* ==============================
+           STORY PAGE
+        ============================== */
+
+        .story-page {
+
+            min-height: 100vh;
+
+            padding-top: 130px;
+            padding-left: 300px;
+            padding-right: 60px;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,.65),
+                    rgba(0,0,0,.85)
+                ),
+                url("kv2.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+        }
+
+
+        .story-content {
+
+            max-width: 900px;
+
+            margin: auto;
+
+            text-align: center;
+
+        }
+
+
+        .story-label {
+
+            color: #ff6500;
+
+            font-family:
+                "Monotype Corsiva",
+                cursive;
+
+            font-size: 25px;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .story-content h1 {
+
+            font-family: Algerian, serif;
+
+            font-size: 65px;
+
+            color: #ff6500;
+
+            text-shadow:
+                0 0 15px red,
+                0 0 35px orange;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .story-line {
+
+            width: 120px;
+
+            height: 3px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    red,
+                    orange,
+                    gold
+                );
+
+            margin: 0 auto 35px;
+
+        }
+
+
+        .story-content p {
+
+            color: #dddddd;
+
+            font-size: 19px;
+
+            line-height: 2;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .story-content h2 {
+
+            margin-top: 50px;
+
+            color: #ff6500;
+
+            font-family: Elephant, serif;
+
+            text-shadow:
+                0 0 15px red;
+
+        }
+
+
+        /* ==============================
+           KVKF SIDE BAR
+        ============================== */
+
+        .story-sidebar {
+
+            position: fixed;
+
+            left: 0;
+            top: 0;
+
+            width: 250px;
+            height: 100vh;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #080300,
+                    #160700,
+                    #050505
+                );
+
+            border-right: 1px solid #ff6500;
+
+            padding: 18px 12px;
+
+            z-index: 5000;
+
+            box-shadow:
+                5px 0 25px
+                rgba(255,70,0,.20);
+
+        }
+
+
+        /* SIDEBAR HEADER */
+
+        .story-sidebar-header {
+
+            height: 55px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding: 0 10px;
+
+            border-bottom:
+                1px solid
+                rgba(255,101,0,.35);
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .story-sidebar-title {
+
+            font-family: Algerian, serif;
+
+            font-size: 24px;
+
+            letter-spacing: 2px;
+
+            color: #ff6500;
+
+            text-shadow:
+                0 0 8px #ff4500,
+                0 0 18px
+                rgba(255,69,0,.5);
+
+        }
+
+
+        /* MAGIC WAND */
+
+        .story-magic {
+
+            width: 38px;
+            height: 38px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 9px;
+
+            font-size: 22px;
+
+            background:
+                rgba(255,101,0,.08);
+
+            border:
+                1px solid
+                rgba(255,101,0,.35);
+
+            transition: .3s;
+
+        }
+
+
+        .story-magic:hover {
+
+            background: #ff6500;
+
+            transform:
+                rotate(12deg)
+                scale(1.08);
+
+            box-shadow:
+                0 0 15px #ff6500;
+
+        }
+
+
+        /* SIDEBAR MENU */
+
+        .story-side-menu {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 8px;
+
+        }
+
+
+        .story-side-item {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 14px;
+
+            width: 100%;
+
+            min-height: 48px;
+
+            padding: 10px 14px;
+
+            border-radius: 9px;
+
+            color: #eeeeee;
+
+            text-decoration: none;
+
+            font-family:
+                "Segoe UI",
+                Arial,
+                sans-serif;
+
+            font-size: 16px;
+
+            transition: .3s;
+
+        }
+
+
+        .story-side-icon {
+
+            width: 25px;
+
+            text-align: center;
+
+            font-size: 19px;
+
+            color: #ff6500;
+
+        }
+
+
+        .story-side-item:hover {
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(255,101,0,.22),
+                    rgba(255,101,0,.05)
+                );
+
+            color: white;
+
+            transform:
+                translateX(4px);
+
+        }
+
+
+        .story-side-item:hover
+        .story-side-icon {
+
+            color: #ffb000;
+
+            text-shadow:
+                0 0 10px #ff6500;
+
+        }
+
+
+        /* ==============================
+           MOBILE
+        ============================== */
+
+        @media(max-width:700px) {
+
+            .story-sidebar {
+
+                width: 210px;
+
+            }
+
+
+            .story-page {
+
+                padding-left: 230px;
+                padding-right: 20px;
+
+            }
+
+
+            .story-content h1 {
+
+                font-size: 42px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =================================
+     KVKF 1 SIDEBAR
+================================= -->
+
+<aside class="story-sidebar">
+
+
+    <div class="story-sidebar-header">
+
+
+        <div class="story-sidebar-title">
+
+            KVKF 1
+
+        </div>
+
+
+        <div class="story-magic">
+
+            🪄
+
+        </div>
+
+
+    </div>
+
+
+    <div class="story-side-menu">
+
+
+        <!-- STORY PROMPT -->
+
+        <a
+            href="story prompt.html"
+            class="story-side-item"
+        >
+
+            <span class="story-side-icon">
+                ✎
+            </span>
+
+            <span>
+                Story Prompt
+            </span>
+
+        </a>
+
+
+        <!-- WRITE STORY -->
+
+        <a
+            href="write-story.html"
+            class="story-side-item"
+        >
+
+            <span class="story-side-icon">
+                ✦
+            </span>
+
+            <span>
+                Write Story
+            </span>
+
+        </a>
+
+
+        <!-- IMAGES -->
+
+        <a
+            href="images.html"
+            class="story-side-item"
+        >
+
+            <span class="story-side-icon">
+                ▧
+            </span>
+
+            <span>
+                Images
+            </span>
+
+        </a>
+
+
+    </div>
+
+</aside>
+
+
+
+<!-- =================================
+     MAIN STORY PAGE
+================================= -->
+
+<main class="story-page">
+
+
+    <div class="story-content">
+
+
+        <p class="story-label">
+
+            THE BEGINNING
+
+        </p>
+
+
+        <h1>
+
+            THE STORY
+
+        </h1>
+
+
+        <div class="story-line"></div>
+
+
+        <p>
+
+            In a world where darkness hides
+            ancient secrets, a new force begins
+            to rise.
+
+        </p>
+
+
+        <p>
+
+            Fire is not just a power.
+            It is a destiny waiting to be awakened.
+
+        </p>
+
+
+        <p>
+
+            KAALAVAASAL : KAALAFIRE begins
+            the journey into a mysterious universe
+            where power, darkness and destiny collide.
+
+        </p>
+
+
+        <h2>
+
+            THE FIRE HAS BEGUN...
+
+        </h2>
+
+
+    </div>
+
+
+</main>
+
+
+</body>
+
+</html>
